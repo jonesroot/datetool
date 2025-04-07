@@ -74,10 +74,12 @@ def date_tools(
         if target:
             target_date = datetime.strptime(target, "%d.%m.%Y")
             delta = target_date - base_date
-            return f"Gap: {delta.days // 7} weeks, {delta.days % 7} days."
+            print(f"Gap: {delta.days // 7} weeks, {delta.days % 7} days.")
+            return
         if week or add:
             result_date = base_date + timedelta(weeks=week or 0, days=add or 0)
-            return f"New date: {result_date.strftime('%d.%m.%Y')}"
+            print(f"New date: {result_date.strftime('%d.%m.%Y')}")
+            return
 
 
 def get_parser() -> ArgumentParser:
