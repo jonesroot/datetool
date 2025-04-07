@@ -7,8 +7,8 @@ from datetime import datetime, timedelta
 from jsonargparse import ArgumentParser
 
 
-VERSION = "1.0.3"
-REPO_URL = "https://raw.githubusercontent.com/jonesroot/MyTools/refs/heads/main/Python/datetools.py"
+VERSION = "0.1.1"
+REPO_URL = "https://raw.githubusercontent.com/jonesroot/datetool/refs/heads/main/datetools.py"
 
 
 class Colors:
