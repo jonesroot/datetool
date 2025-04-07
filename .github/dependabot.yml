@@ -1,7 +1,7 @@
 version: 2
 updates:
   - package-ecosystem: "pip"
-    directory: "/"  # Root project
+    directory: "/"
     schedule:
       interval: "weekly"
     labels:
