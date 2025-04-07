@@ -97,7 +97,7 @@ def get_parser() -> ArgumentParser:
     return parser
 
 
-def main():
+def main() -> None:
     parser = get_parser()
     parser.cli()
 
