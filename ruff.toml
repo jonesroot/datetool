@@ -1,6 +1,7 @@
 line-length = 88
 indent-width = 4
-target-version = ["py310", "py39"]
+target-version = "py310"
+
 exclude = ["docs/_build", "docs/requirements.txt"]
 
 [lint]
