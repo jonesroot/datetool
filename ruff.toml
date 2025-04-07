@@ -6,7 +6,4 @@ exclude = ["docs/_build", "docs/requirements.txt"]
 
 [lint]
 select = ["ALL"]
-ignore = [
-    "D",
-    "ANN",
-]
+ignore = ["D", "ANN", "INP001"]
