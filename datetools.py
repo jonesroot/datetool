@@ -6,7 +6,6 @@ import time
 import subprocess
 from typing import Optional
 from datetime import datetime, timedelta
-from pytz import timezone
 from jsonargparse import ArgumentParser
 
 
