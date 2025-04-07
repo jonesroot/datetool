@@ -1,6 +1,8 @@
 [project]
 name = "datetool"
 version = "0.1.0"
+description = "A Python datetime utility tool."
+requires-python = ">=3.10"
 dependencies = [
     "jsonargparse",
     "pytz",
@@ -17,10 +19,18 @@ lint = [
     "ruff==0.5.2",
     "mypy",
 ]
+dev = [
+    "ruff",
+    "mypy",
+    "pytest",
+]
 
 [build-system]
 requires = ["setuptools>=78.1.0"]
 build-backend = "setuptools.build_meta"
+
+[tool.ruff]
+extend = "ruff.toml"
 
 [tool.mypy]
 exclude = "build/"
