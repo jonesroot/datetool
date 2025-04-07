@@ -1,6 +1,6 @@
 [project]
 name = "datetool"
-version = "0.1.0"
+version = "0.1.1"
 description = "A Python datetime utility tool."
 requires-python = ">=3.9"
 dependencies = [
