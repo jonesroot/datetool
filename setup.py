@@ -12,7 +12,7 @@ setup(
     ],
     entry_points={
         'console_scripts': [
-            'datetools = datetools:main',
+            'datetools = datetools.py:main',
         ],
     },
 )
