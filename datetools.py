@@ -86,16 +86,14 @@ def date_tools(
 def get_parser() -> ArgumentParser:
     parser = ArgumentParser(prog="datetools", description="DateTools CLI Utility.")
 
-    # Subcommand parser
     apply_parser = ArgumentParser(description="Date calculation tools")
     apply_parser.add_argument("-d", "--date", type=str, help="Base date")
     apply_parser.add_argument("-t", "--target", type=str, help="Target date")
     apply_parser.add_argument("-w", "--week", type=int, default=0, help="Weeks to add")
     apply_parser.add_argument("-a", "--add", type=int, default=0, help="Days to add")
-    apply_parser.set_defaults(func=date_tools)
 
     subcommands = parser.add_subcommands()
-    subcommands.add_subcommand("apply", apply_parser)
+    subcommands.add_subcommand("apply", apply_parser, func=date_tools)
 
     return parser
 
