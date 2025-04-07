@@ -25,11 +25,11 @@ clr = Colors()
 
 
 def usage_display():
-    print(f"""{clr.CYAN}Example:
+    return f"""{clr.CYAN}Example:
 
 {clr.CYAN}Command: {clr.BOLD}{clr.GREEN}datetools apply -d 01.01.2024 -t 01.03.2024{clr.RESET}
 {clr.CYAN}Description: {clr.BOLD}{clr.YELLOW}Gap between those dates will be shown.{clr.RESET}
-""")
+"""
 
 
 def check_update():
