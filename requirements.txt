@@ -1,0 +1,7 @@
+jsonargparse
+pytest
+pytest-cov
+pytz
+sphinx
+sphinx-argparse
+.[test]
