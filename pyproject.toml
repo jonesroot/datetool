@@ -1,27 +1,23 @@
 [project]
 name = "datetool"
 version = "0.1.0"
-
-[project.dependencies]
-jsonargparse = "*"
-pytz = "*"
-sphinx = "*"
-sphinx-argparse = "*"
+dependencies = [
+    "jsonargparse",
+    "pytz",
+    "sphinx",
+    "sphinx-argparse",
+]
 
 [project.optional-dependencies]
-lint = [
-    "ruff==0.5.2",
-    "mypy"
-]
 test = [
     "pytest",
-    "pytest-cov"
+    "pytest-cov",
+]
+lint = [
+    "ruff==0.5.2",
+    "mypy",
 ]
 
 [build-system]
-requires = [
-    "setuptools>=78.1.0",
-    "wheel"
-]
-
+requires = ["setuptools>=78.1.0"]
 build-backend = "setuptools.build_meta"
