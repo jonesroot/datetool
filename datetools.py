@@ -1,9 +1,17 @@
 #!/usr/bin/env python3
 
+import sys
+import os
+import time
+import subprocess
 from typing import Optional
 from datetime import datetime, timedelta
 from pytz import timezone
 from jsonargparse import ArgumentParser
+
+
+VERSION = "1.0.3"
+REPO_URL = "https://raw.githubusercontent.com/jonesroot/MyTools/refs/heads/main/Python/datetools.py"
 
 
 class Colors:
@@ -25,11 +33,44 @@ def usage_display():
 """)
 
 
+def check_update():
+    print(f"{clr.CYAN}Checking for updates...{clr.RESET}")
+    time.sleep(1)
+    tmp_file = "/tmp/datetools_new"
+
+    try:
+        subprocess.run(
+            [
+                "curl",
+                "-s",
+                "-o",
+                tmp_file,
+                REPO_URL
+            ],
+            check=True
+        )
+        
+        with open(tmp_file, "rb") as new_file, open(sys.argv[0], "rb") as old_file:
+            if new_file.read() == old_file.read():
+                print(f"{clr.GREEN}You're already using the latest version.{clr.RESET}")
+                return
+
+        os.replace(tmp_file, sys.argv[0])
+        print(f"{clr.GREEN}Updated to latest version! Restarting in 3 seconds...{clr.RESET}")
+        time.sleep(3)
+        os.execv(sys.executable, [sys.executable] + sys.argv)
+
+    except Exception as e:
+        print(f"{clr.YELLOW}Failed to update: {e}{clr.RESET}")
+        if os.path.exists(tmp_file):
+            os.remove(tmp_file)
+
+
 def date_tools(
     date: Optional[str] = None,
     target: Optional[str] = None,
-    week: Optional[int] = None,
-    add: Optional[int] = None,
+    week: Optional[int] = 0,
+    add: Optional[int] = 0,
 ):
     if date:
         base_date = datetime.strptime(date, "%d.%m.%Y")
