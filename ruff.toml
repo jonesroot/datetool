@@ -1,10 +1,9 @@
-[tool.ruff]
 line-length = 88
 indent-width = 4
-target-version = "py310 py39"
+target-version = ["py310", "py39"]
 exclude = ["docs/_build", "docs/requirements.txt"]
 
-[tool.ruff.lint]
+[lint]
 select = ["ALL"]
 ignore = [
     "D",
