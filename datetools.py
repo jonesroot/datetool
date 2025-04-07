@@ -99,7 +99,7 @@ def get_parser() -> ArgumentParser:
 
 def main() -> None:
     parser = get_parser()
-    parser.cli()
+    parser.parse_args()
 
 
 if __name__ == "__main__":
