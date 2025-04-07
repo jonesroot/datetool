@@ -24,7 +24,7 @@ class Colors:
 clr = Colors()
 
 
-def usage_display():
+def usage_display() -> str:
     return f"""{clr.CYAN}Example:
 
 {clr.CYAN}Command: {clr.BOLD}{clr.GREEN}datetools apply -d 01.01.2024 -t 01.03.2024{clr.RESET}
@@ -32,7 +32,7 @@ def usage_display():
 """
 
 
-def check_update():
+def check_update() -> None:
     print(f"{clr.CYAN}Checking for updates...{clr.RESET}")
     time.sleep(1)
     tmp_file = "/tmp/datetools_new"
@@ -70,7 +70,7 @@ def date_tools(
     target: Optional[str] = None,
     week: Optional[int] = 0,
     add: Optional[int] = 0,
-):
+) -> None:
     if date:
         base_date = datetime.strptime(date, "%d.%m.%Y")
         if target:
