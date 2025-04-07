@@ -9,6 +9,10 @@ sphinx = "*"
 sphinx-argparse = "*"
 
 [project.optional-dependencies]
+lint = [
+    "ruff==0.5.2",
+    "mypy"
+]
 test = [
     "pytest",
     "pytest-cov"
