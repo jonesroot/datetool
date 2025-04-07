@@ -1,13 +1,11 @@
 version: 2
 updates:
   - package-ecosystem: "pip"
-    directory: "/"
+    directory: "/"  # Root project
     schedule:
       interval: "weekly"
     labels:
       - "dependencies"
-      - "python"
+      - "auto-update"
     reviewers:
-      - "jonesroot"
-    assignees:
-      - "jonesroot"
+      - "user-github"
