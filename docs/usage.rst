@@ -1,6 +1,10 @@
-DateTools Command Line
-======================
+Usage
+=====
 
-.. jsonargparse::
+Command Line Usage
+------------------
+
+.. argparse::
    :module: datetools
    :func: get_parser
+   :prog: datetools
