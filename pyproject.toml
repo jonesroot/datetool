@@ -16,7 +16,7 @@ test = [
     "pytest-cov",
 ]
 lint = [
-    "ruff==0.5.2",
+    "ruff==0.11.7",
     "mypy",
 ]
 dev = [
